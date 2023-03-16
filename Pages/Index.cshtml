@@ -1,0 +1,34 @@
+﻿@page
+@model IndexModel
+
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <table class="table text-left">
+        <thead>
+            <tr>
+                <th scope="col">Key</th>
+                <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">APPCONFIG_VALUE</td>
+                <td>@Configuration["APPCONFIG_VALUE"]</td>
+            </tr>
+            <tr>
+                <td scope="row">KEYVAULT_SECRET</td>
+                <td>@Configuration["KEYVAULT_SECRET"]</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
